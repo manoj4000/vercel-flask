@@ -8,7 +8,6 @@ app = Flask(__name__)
 def hello():
     return 'Hello, world'
     
-api_key = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZGQwODMzMGU5OWI2NzUxNjRmZTYxZTViNmM0MDczMyIsInN1YiI6IjY1YzA5YzRmOWYzN2IwMDE3YzVkY2U4NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-Kn2fguUxvdLpiqCUilZdCho7vZYi2Mogvxolh7wcaM'
 
 @app.route('/discover-movies', methods=['GET'])
 def discover_movies():
@@ -16,8 +15,7 @@ def discover_movies():
     url = 'https://api.themoviedb.org/3/discover/movie'
     headers = {
         'accept': 'application/json',
-        'Authorization': api_key
-    }
+        'Authorization':'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZGQwODMzMGU5OWI2NzUxNjRmZTYxZTViNmM0MDczMyIsInN1YiI6IjY1YzA5YzRmOWYzN2IwMDE3YzVkY2U4NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-Kn2fguUxvdLpiqCUilZdCho7vZYi2Mogvxolh7wcaM'
     params = {
         'page': page
     }
